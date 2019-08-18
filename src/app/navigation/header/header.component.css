@@ -1,0 +1,52 @@
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 250px;
+}
+
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+a:hover,
+a:active {
+  color: lightgray;
+
+}
+
+.navitems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.nav-caption {
+  display: inline-block;
+  padding-left: 6px;
+}
+
+.logo {
+  padding-top: 25%;
+  top: 100%;
+  z-index: 100 !important;
+  position: relative;
+
+}
+.site-title {
+  padding-right: 20px;
+  padding-top: 5px;
+}
+
+.mat-toolbar {
+  top: 80%;
+  position: static;
+
+}
+
+

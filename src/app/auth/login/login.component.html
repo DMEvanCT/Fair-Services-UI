@@ -1,0 +1,33 @@
+<img src="assets/images/durham_fair_grunge.png" height="250" width="20%"  class="login-logo">
+<section class="login">
+  <form fxLayout="column" fxLayoutAlign="center right" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <mat-form-field>
+      <input
+        type="email"
+        matInput
+        placeholder="example@mail.com"
+        name="email"
+        ngModel="email"
+        email
+        required #emailInput="ngModel">
+      <mat-error *ngIf="emailInput.hasError('required')">You must enter an email</mat-error>
+    </mat-form-field>
+    <mat-form-field hintLabel="Must be 6 characters in length">
+      <input
+        type="password"
+        matInput
+        placeholder="password"
+        ngModel="password"
+        name="password"
+        required
+        minlength="6"
+        #pwInput="ngModel">
+      <mat-hint align="end">{{ pwInput.value?.length }} / 6 </mat-hint>
+      <mat-error>Has to be at least 6 characters long</mat-error>
+    </mat-form-field>
+    <button type="submit" *ngIf="!isLoading" mat-raised-button color="primary" [disabled]="f.invalid">Login</button>
+    <button type="button" mat-raised-button color="accent" routerLink="/signup">Signup</button>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+  </form>
+
+</section>

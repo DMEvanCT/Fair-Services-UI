@@ -1,0 +1,13 @@
+.login {
+  padding: 100px;
+  position: relative;
+  padding-right: 100px;
+}
+
+.login-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+
+}

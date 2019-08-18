@@ -1,0 +1,28 @@
+<mat-toolbar class="mat-toolbar" color="warn">
+  <div fxHide.gt-sm>
+    <button mat-button (click)="onSideNavToggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div><a routerLink="/"><img class="logo" src="assets/images/Durham-Fair-100th.svg" height="100px"></a></div>
+  <h1 class="site-title">{{siteTitle}}</h1>
+  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+    <ul fxLayout class="navitems" fxLayoutGap="10px">
+      <button mat-button fxFlexAlign.gt-md="left left" [matMenuTriggerFor]="volunteer">Volunteer</button>
+      <mat-menu #volunteer="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="administrative" >Administrative</button>
+      </mat-menu>
+      <mat-menu #administrative>
+        <button mat-menu-item *ngFor="let vol of volunteerArray">{{vol}}</button>
+      </mat-menu>
+      <button mat-button fxFlexAlign.gt-md="left left" routerLink="/signup" *ngIf="!isAuthed">Signup</button>
+      <button mat-button fxFlexAlign.gt-md="left left" routerLink="/login" *ngIf="!isAuthed">Login</button>
+
+
+
+      <li *ngIf="isAuthed"><a routerLink="/training">Training</a></li>
+      <li *ngIf="isAuthed"><a  (click)="onLogout()">Logout</a></li>
+    </ul>
+
+  </div>
+</mat-toolbar>

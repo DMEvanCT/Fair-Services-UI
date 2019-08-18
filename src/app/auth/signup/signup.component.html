@@ -1,0 +1,38 @@
+<img src="assets/images/durham_fair_grunge.png" height="250" width="20%"  class="login-logo">
+<section class="signup">
+  <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <mat-form-field>
+      <input
+        type="email"
+        matInput
+        placeholder="example@mail.com"
+        name="email"
+        ngModel="email"
+        email
+        required #emailInput="ngModel">
+      <mat-error *ngIf="emailInput.hasError('required')">You must enter an email</mat-error>
+      <mat-error *ngIf="!emailInput.hasError('required')">You must a valid email</mat-error>
+    </mat-form-field>
+    <mat-form-field hintLabel="Must be 6 characters in length">
+      <input
+        type="password"
+        matInput
+        placeholder="SuperSecretPass!"
+        ngModel="password"
+        name="password"
+        required
+        minlength="6"
+        #pwInput="ngModel">
+      <mat-hint align="end">{{ pwInput.value?.length }} / 6 </mat-hint>
+      <mat-error>Has to be at least 6 characters long</mat-error>
+    </mat-form-field>
+      <mat-checkbox  class="member_typecheckbox" [(ngModel)]="volunteer" color="primary">Volunteer</mat-checkbox>
+      <mat-checkbox  class="member_typecheckbox" [(ngModel)]="sponsor" color="primary">Sponsor</mat-checkbox>
+      <mat-checkbox  class="member_typecheckbox" [(ngModel)]="vendor" color="primary">Vendor</mat-checkbox>
+    <mat-checkbox ngModel name="terms" color="primary" required (click)="setTerms()">Agree to Terms and Conditions</mat-checkbox>
+    <button type="submit" *ngIf="!isLoading" mat-raised-button color="primary" [disabled]="f.invalid">Submit</button>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+  </form>
+
+
+</section>

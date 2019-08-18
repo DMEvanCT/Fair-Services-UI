@@ -22,6 +22,7 @@ import {MatMenuModule} from '@angular/material';
 import { HttpClientModule} from '@angular/common/http';
 import {EastereggsComponent} from './easteregg/easteregg.component';
 import {VolGatesComponent} from './vol-gates/vol-gates.component';
+import {FairServicesComponent} from './fair-services/fair-services.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {VolGatesComponent} from './vol-gates/vol-gates.component';
     HeaderComponent,
     SidenavListComponent,
     EastereggsComponent,
-    VolGatesComponent
+    VolGatesComponent,
+    FairServicesComponent
 
   ],
   imports: [

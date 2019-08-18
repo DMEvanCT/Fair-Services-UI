@@ -13,6 +13,7 @@ export class WelcomeComponent implements OnInit {
   volunteerCount: number;
   vendorCount: number;
   sponsorCount: number;
+  fairname: string;
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
@@ -22,6 +23,7 @@ export class WelcomeComponent implements OnInit {
     this.volunteerCount = 0;
     this.vendorCount = 100;
     this.sponsorCount = 10;
+    this.fairname = 'Durham Fair';
     let obs = this.http.get('https://api.github.com/users/DMEvanCT')
     obs.subscribe((response) => console.log(response));
 

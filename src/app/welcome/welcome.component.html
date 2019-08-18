@@ -6,96 +6,74 @@
   </mat-card-header>
 </mat-card>
 <section class="info-cards" fxLayout fxLayoutAlign="center">
- <mat-accordion  fxFlex.xs="100%" fxFlex="400px" >
+ <mat-accordion  fxFlex.xs="100%" fxFlex="30%" >
     <mat-expansion-panel>
       <mat-expansion-panel-header>
-        <br /><mat-panel-title>Admission Gates</mat-panel-title>
-        <mat-panel-description>Volunteer at an admissions gate for  {{this.dateyear}} year</mat-panel-description>
+        <br /><mat-panel-title><h1>Volunteer</h1></mat-panel-title>
+        <mat-panel-description><p>Volunteer at an the {{this.fairname}} {{this.dateyear}} year</p></mat-panel-description>
       </mat-expansion-panel-header>
+          <h1>Admissions Cashier</h1>
+      <p> Ever wanted to sell tickets at {{this.fairname}}? Now is your chance!</p>
+      <button type="button" mat-button color="primary" mat-button>Reserve a Spot</button>
+      <button type="button" mat-button color="primary" mat-button>Learn More</button>
+          <h1>IT Support</h1>
+      <p> Need some IT experience? Want to keep your mind sharp and learn some new things! Join the IT
+      team today!</p>
       <button type="button" mat-button color="primary" mat-button>Reserve a Spot</button>
       <button type="button" mat-button color="primary" mat-button>Learn More</button>
 
 
+
+
+
     </mat-expansion-panel>
-   <mat-expansion-panel>
-     <mat-expansion-panel-header>
-     <mat-panel-title>
-       IT Services
-     </mat-panel-title>
-     <mat-panel-description>Volunteer on the IT Team for for {{this.dateyear}} year</mat-panel-description>
-     </mat-expansion-panel-header>
-     <button type="button" mat-button color="primary" mat-button>Join Now</button>
-     <button type="button" mat-button color="primary" mat-button>Learn More</button>
-   </mat-expansion-panel>
-   <mat-expansion-panel>
-     <mat-expansion-panel-header>
-       <mat-panel-title>
-          Information Booth
-       </mat-panel-title>
-       <mat-panel-description>Volunteer at the information booth {{this.dateyear}} year</mat-panel-description>
-     </mat-expansion-panel-header>
-     <button type="button" mat-button color="primary" mat-button>Reserve a Spot</button>
-     <button type="button" mat-button color="primary" mat-button>Learn More</button>
-   </mat-expansion-panel>
  </mat-accordion>
 
 
+
     <mat-accordion>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
-          <br /><mat-panel-title>Vendor Check in</mat-panel-title>
-          <mat-panel-description>Checkin for the {{this.dateyear}} year</mat-panel-description>
+          <br /><mat-panel-title><h1>Vendors</h1></mat-panel-title>
+          <mat-panel-description><p>Vendor Services</p></mat-panel-description>
         </mat-expansion-panel-header>
+        <h1>Vendor Checkin</h1>
+        <p>When arriving at the {{this.fairname}} for the {{this.dateyear}} year please remember to check in</p>
         <button type="button" mat-button color="primary" mat-button>Check In Online</button>
-        <button type="button" mat-button color="primary" mat-button>Manual Checkin Instructions</button>
-
-
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-              Request WIFI
-          </mat-panel-title>
-          <mat-panel-description>Request WIFI for {{this.dateyear}} year</mat-panel-description>
-        </mat-expansion-panel-header>
+        <button type="button" mat-button color="primary" mat-button>Manual Check in Instructions</button>
+        <h1>Request WI-FI</h1>
+        <p>The {{this.fairname}} offers Wireless internet to vendors. Please review pricing before requesting</p>
         <button type="button" mat-button color="primary" mat-button>Request Now</button>
         <button type="button" mat-button color="primary" mat-button>Pricing</button>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Report Issue
-          </mat-panel-title>
-          <mat-panel-description>Report Issue for {{this.dateyear}} year</mat-panel-description>
-        </mat-expansion-panel-header>
+        <h1>Report an Issue</h1>
+        <p>Having an issue?</p>
         <button type="button" mat-button color="primary" mat-button>Report</button>
+
+
       </mat-expansion-panel>
-    </mat-accordion>
+
 
     <mat-accordion>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
-          <br /><mat-panel-title>Ticket Prices</mat-panel-title>
-          <mat-panel-description>Checkin for the ticket prices for {{this.dateyear}} year</mat-panel-description>
+          <br /><mat-panel-title><h1>Ticket Services</h1></mat-panel-title>
+          <mat-panel-description><p>Have a questions about tickets or admission? We can help you out!</mat-panel-description>
         </mat-expansion-panel-header>
+        <h1>Ticket Prices</h1>
+        <p>Want to buy tickets? Questions about ticket prices please check out the options below</p>
         <button type="button" mat-button color="primary" align="center" mat-button>Check Prices</button>
         <button type="button"  onclick="window.location.href='https://www.durhamfair.biz/Admissions/'" mat-button color="primary" align="center" mat-button>Buy Tickets</button>
-
-
-
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Entertainment
-          </mat-panel-title>
-          <mat-panel-description>Entertainment for {{this.dateyear}} year</mat-panel-description>
-        </mat-expansion-panel-header>
+        <h1>Entertainment</h1>
+        <p>Have questions about entertainment for {{this.dateyear}} year?</p>
         <button type="button" mat-button color="primary" mat-button>VIP Seating</button>
         <button type="button" mat-button color="primary" mat-button>Meet and Greets</button>
         <button type="button" mat-button color="primary" mat-button>Current Acts</button>
+
+
       </mat-expansion-panel>
     </mat-accordion>
+    </mat-accordion>
+</section>
 
 
 

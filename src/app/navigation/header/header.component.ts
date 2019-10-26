@@ -10,7 +10,7 @@ import {Subscription} from "rxjs";
 })
 export class HeaderComponent implements OnInit {
   @Output() sidenavToggle = new EventEmitter<void>();
-  isAuthed:  boolean;
+  isAuthed: boolean;
   authSubsription: Subscription;
   siteTitle: string;
   volunteerArray = ['Admission Gates', 'IT Services', 'Information Booths'];

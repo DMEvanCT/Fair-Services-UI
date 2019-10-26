@@ -11,6 +11,7 @@ export class VolGatesComponent implements OnInit {
   location: string;
   seats: number;
   gatename: string;
+
   gate: [];
   constructor(private http: HttpClient) {
   }

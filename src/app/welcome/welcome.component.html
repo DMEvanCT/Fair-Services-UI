@@ -1,101 +1,24 @@
-<!--<div class="welcome" fxLayout="column" fxLayout.gt-md="row" fxLayoutGap.gt-md="20px" fxLayoutAlign="center center">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  .parallax {
+    /* The image used */
+    background-image: url("../../assets/images/candy-apples.jpg");
 
-<mat-card>
-  <mat-card-header>
-    <mat-card-title fxLayout="row" fxLayoutAlign="center center">Current Volunteer Count: {{this.volunteerCount}}      | Current Vendor Count {{this.vendorCount}},    |       Current Sponsor Count {{this.sponsorCount}}</mat-card-title>
-  </mat-card-header>
-</mat-card>
-<section class="info-cards" fxLayout fxLayoutAlign="center">
- <mat-accordion  fxFlex.xs="100%" fxFlex="400px" >
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <br /><mat-panel-title>Admission Gates</mat-panel-title>
-        <mat-panel-description>Volunteer at an admissions gate for  {{this.dateyear}} year</mat-panel-description>
-      </mat-expansion-panel-header>
-      <button type="button" mat-button color="primary" mat-button>Reserve a Spot</button>
-      <button type="button" mat-button color="primary" mat-button>Learn More</button>
+    /* Set a specific height */
+    min-height: 500px;
 
-
-    </mat-expansion-panel>
-   <mat-expansion-panel>
-     <mat-expansion-panel-header>
-     <mat-panel-title>
-       IT Services
-     </mat-panel-title>
-     <mat-panel-description>Volunteer on the IT Team for for {{this.dateyear}} year</mat-panel-description>
-     </mat-expansion-panel-header>
-     <button type="button" mat-button color="primary" mat-button>Join Now</button>
-     <button type="button" mat-button color="primary" mat-button>Learn More</button>
-   </mat-expansion-panel>
-   <mat-expansion-panel>
-     <mat-expansion-panel-header>
-       <mat-panel-title>
-          Information Booth
-       </mat-panel-title>
-       <mat-panel-description>Volunteer at the information booth {{this.dateyear}} year</mat-panel-description>
-     </mat-expansion-panel-header>
-     <button type="button" mat-button color="primary" mat-button>Reserve a Spot</button>
-     <button type="button" mat-button color="primary" mat-button>Learn More</button>
-   </mat-expansion-panel>
- </mat-accordion>
-
-
-    <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <br /><mat-panel-title>Vendor Check in</mat-panel-title>
-          <mat-panel-description>Checkin for the {{this.dateyear}} year</mat-panel-description>
-        </mat-expansion-panel-header>
-        <button type="button" mat-button color="primary" mat-button>Check In Online</button>
-        <button type="button" mat-button color="primary" mat-button>Manual Checkin Instructions</button>
-
-
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-              Request WIFI
-          </mat-panel-title>
-          <mat-panel-description>Request WIFI for {{this.dateyear}} year</mat-panel-description>
-        </mat-expansion-panel-header>
-        <button type="button" mat-button color="primary" mat-button>Request Now</button>
-        <button type="button" mat-button color="primary" mat-button>Pricing</button>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Report Issue
-          </mat-panel-title>
-          <mat-panel-description>Report Issue for {{this.dateyear}} year</mat-panel-description>
-        </mat-expansion-panel-header>
-        <button type="button" mat-button color="primary" mat-button>Report</button>
-      </mat-expansion-panel>
-    </mat-accordion>
-
-    <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <br /><mat-panel-title>Ticket Prices</mat-panel-title>
-          <mat-panel-description>Checkin for the ticket prices for {{this.dateyear}} year</mat-panel-description>
-        </mat-expansion-panel-header>
-        <button type="button" mat-button color="primary" align="center" mat-button>Check Prices</button>
-        <button type="button"  onclick="window.location.href='https://www.durhamfair.biz/Admissions/'" mat-button color="primary" align="center" mat-button>Buy Tickets</button>
-
-
-
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Entertainment
-          </mat-panel-title>
-          <mat-panel-description>Entertainment for {{this.dateyear}} year</mat-panel-description>
-        </mat-expansion-panel-header>
-        <button type="button" mat-button color="primary" mat-button>VIP Seating</button>
-        <button type="button" mat-button color="primary" mat-button>Meet and Greets</button>
-        <button type="button" mat-button color="primary" mat-button>Current Acts</button>
-      </mat-expansion-panel>
-    </mat-accordion>
-
-
-
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+<div class="parallax"></div>
+<mat-grid-list class="vops" cols="4" rowHeight="2:1">
+  <mat-card>
+    <div class="vops">
+<mat-grid-tile *ngFor="let vops of VolunteerOps">{{vops}}</mat-grid-tile>
+    </div>
+  </mat-card>
+</mat-grid-list>

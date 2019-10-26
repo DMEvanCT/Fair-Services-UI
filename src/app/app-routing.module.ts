@@ -5,7 +5,6 @@ import {WelcomeComponent} from "./welcome/welcome.component";
 import {SignupComponent} from "./auth/signup/signup.component";
 import {LoginComponent} from "./auth/login/login.component";
 import {AuthGuard} from "./auth/auth.guard";
-import {FairServicesComponent} from './fair-services/fair-services.component';
 import {EastereggsComponent} from './easteregg/easteregg.component';
 import {VolGatesComponent} from './vol-gates/vol-gates.component';
 

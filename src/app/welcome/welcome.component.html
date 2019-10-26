@@ -1,79 +1,24 @@
-<!--<div class="welcome" fxLayout="column" fxLayout.gt-md="row" fxLayoutGap.gt-md="20px" fxLayoutAlign="center center">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  .parallax {
+    /* The image used */
+    background-image: url("../../assets/images/candy-apples.jpg");
 
-<mat-card>
-  <mat-card-header>
-    <mat-card-title fxLayout="row" fxLayoutAlign="center center">Current Volunteer Count: {{this.volunteerCount}}      | Current Vendor Count {{this.vendorCount}},    |       Current Sponsor Count {{this.sponsorCount}}</mat-card-title>
-  </mat-card-header>
-</mat-card>
-<section class="info-cards" fxLayout fxLayoutAlign="center">
- <mat-accordion  fxFlex.xs="100%" fxFlex="30%" >
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <br /><mat-panel-title><h1>Volunteer</h1></mat-panel-title>
-        <mat-panel-description><p>Volunteer at an the {{this.fairname}} {{this.dateyear}} year</p></mat-panel-description>
-      </mat-expansion-panel-header>
-          <h1>Admissions Cashier</h1>
-      <p> Ever wanted to sell tickets at {{this.fairname}}? Now is your chance!</p>
-      <button type="button" mat-button color="primary" mat-button>Reserve a Spot</button>
-      <button type="button" mat-button color="primary" mat-button>Learn More</button>
-          <h1>IT Support</h1>
-      <p> Need some IT experience? Want to keep your mind sharp and learn some new things! Join the IT
-      team today!</p>
-      <button type="button" mat-button color="primary" mat-button>Reserve a Spot</button>
-      <button type="button" mat-button color="primary" mat-button>Learn More</button>
+    /* Set a specific height */
+    min-height: 500px;
 
-
-
-
-
-    </mat-expansion-panel>
- </mat-accordion>
-
-
-
-    <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <br /><mat-panel-title><h1>Vendors</h1></mat-panel-title>
-          <mat-panel-description><p>Vendor Services</p></mat-panel-description>
-        </mat-expansion-panel-header>
-        <h1>Vendor Checkin</h1>
-        <p>When arriving at the {{this.fairname}} for the {{this.dateyear}} year please remember to check in</p>
-        <button type="button" mat-button color="primary" mat-button>Check In Online</button>
-        <button type="button" mat-button color="primary" mat-button>Manual Check in Instructions</button>
-        <h1>Request WI-FI</h1>
-        <p>The {{this.fairname}} offers Wireless internet to vendors. Please review pricing before requesting</p>
-        <button type="button" mat-button color="primary" mat-button>Request Now</button>
-        <button type="button" mat-button color="primary" mat-button>Pricing</button>
-        <h1>Report an Issue</h1>
-        <p>Having an issue?</p>
-        <button type="button" mat-button color="primary" mat-button>Report</button>
-
-
-      </mat-expansion-panel>
-
-
-    <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <br /><mat-panel-title><h1>Ticket Services</h1></mat-panel-title>
-          <mat-panel-description><p>Have a questions about tickets or admission? We can help you out!</mat-panel-description>
-        </mat-expansion-panel-header>
-        <h1>Ticket Prices</h1>
-        <p>Want to buy tickets? Questions about ticket prices please check out the options below</p>
-        <button type="button" mat-button color="primary" align="center" mat-button>Check Prices</button>
-        <button type="button"  onclick="window.location.href='https://www.durhamfair.biz/Admissions/'" mat-button color="primary" align="center" mat-button>Buy Tickets</button>
-        <h1>Entertainment</h1>
-        <p>Have questions about entertainment for {{this.dateyear}} year?</p>
-        <button type="button" mat-button color="primary" mat-button>VIP Seating</button>
-        <button type="button" mat-button color="primary" mat-button>Meet and Greets</button>
-        <button type="button" mat-button color="primary" mat-button>Current Acts</button>
-
-
-      </mat-expansion-panel>
-    </mat-accordion>
-    </mat-accordion>
-</section>
-
-
-
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+<div class="parallax"></div>
+<mat-grid-list class="vops" cols="4" rowHeight="2:1">
+  <mat-card>
+    <div class="vops">
+<mat-grid-tile *ngFor="let vops of VolunteerOps">{{vops}}</mat-grid-tile>
+    </div>
+  </mat-card>
+</mat-grid-list>

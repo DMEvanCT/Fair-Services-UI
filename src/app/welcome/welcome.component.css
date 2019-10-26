@@ -1,21 +1,6 @@
-.welcome {
-  text-align: center;
+.vops {
+  padding: 10%;
+  background: whitesmoke;
 }
 
 
-.number-cards {
- width: 10%;
-  height: 10%;
-}
-
-
-.info-cards {
-  padding: 30px;
-  padding-top: 150px;
-
-}
-
-.mem-type {
-  padding-top: 10px;
-
-}

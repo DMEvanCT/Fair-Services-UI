@@ -8,6 +8,8 @@ import {Observable} from 'rxjs';
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.css']
 })
+
+
 export class WelcomeComponent implements OnInit {
   date: Date;
   dateyear: number;
@@ -15,9 +17,12 @@ export class WelcomeComponent implements OnInit {
   vendorCount: number;
   sponsorCount: number;
   fairname: string;
-  VolunteerOps: string[];
-  Vlength: number;
-  constructor(private http: HttpClient) { }
+  volunteerops: any;
+  username: [];
+
+
+  constructor(private http: HttpClient) {
+  }
 
   ngOnInit() {
     // tslint:disable-next-line:prefer-const
@@ -27,16 +32,36 @@ export class WelcomeComponent implements OnInit {
     this.vendorCount = 100;
     this.sponsorCount = 10;
     this.fairname = 'Durham Fair';
-    this.VolunteerOps = ['Gates', 'Information Booths', 'Administrative Services', 'Grounds']
-    let obs = this.http.get('https://api.github.com/users/DMEvanCT')
-    obs.subscribe((response) => console.log(response));
-    this.Vlength = this.ReturnVolOpCound(this.VolunteerOps);
+    this.username = [];
+    // tslint:disable-next-line:prefer-const
+
+    this.volunteerops = [
+      {
+        Name: 'Gates',
+        Desc: 'Volunteer to sell tickets at the gates',
+        Perks: 'Get a free ticket and parking pass',
+        Jobs: ['Cashier', 'Assistant Gate Manager']
+      },
+      {
+        Name: 'Administrative Services',
+        desc: 'Help setup the fair behind the schenes ',
+        Perks: 'Get a free ticket and badge to enter and exit the fair and a free parking pass',
+        Jobs: ['IT Services', 'Office Services', 'Printing', 'Ribbons and Trophies', 'Signs']
+      },
+    ];
+
+
+    const obs = this.http.get('https://api.github.com/users/DMEvanCT')
+    // @ts-ignore
+    obs.subscribe((response) => this.username.push(response.login));
 
   }
 
-  ReturnVolOpCound(volops: string[]): number {
-      this.Vlength = volops.length
-      return this.Vlength;
-  }
+
 
 }
+
+
+
+
+

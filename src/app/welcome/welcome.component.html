@@ -14,11 +14,19 @@
     background-size: cover;
   }
 </style>
-<div class="parallax"></div>
-<mat-grid-list class="vops" cols="4" rowHeight="2:1">
-  <mat-card>
-    <div class="vops">
-<mat-grid-tile *ngFor="let vops of VolunteerOps">{{vops}}</mat-grid-tile>
+
+<div class="parallax">
+  <div class="centerlogo">
+    <img src="../../assets/images/durham_fair_grunge.png" length="600px" width="600px" align="center center">
+  </div>
+</div>
+<mat-grid-list cols="5" rowHeight="2:1">
+  <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
-  </mat-card>
+  </div>
 </mat-grid-list>

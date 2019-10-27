@@ -23,6 +23,7 @@ import { HttpClientModule} from '@angular/common/http';
 import {EastereggsComponent} from './easteregg/easteregg.component';
 import {VolGatesComponent} from './vol-gates/vol-gates.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

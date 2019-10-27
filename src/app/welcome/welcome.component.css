@@ -1,6 +1,24 @@
 .vops {
-  padding: 10%;
-  background: whitesmoke;
 }
 
+.mat-card {
+  alignment: center;
+  padding-top: 5%;
+  alignment: center;
+  padding-left: 32%;
+  padding-right: 20%;
+  width: 50%;
+}
 
+.centerlogo {
+  alignment: center;
+  padding-top: 5%;
+  alignment: center;
+  padding-left: 32%;
+  padding-right: 20%;
+
+}
+
+.bg {
+  background-image: url("../../assets/images/durham_fair_grunge.png");
+}

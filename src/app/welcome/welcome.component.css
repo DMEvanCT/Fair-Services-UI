@@ -1,14 +1,6 @@
 .vops {
 }
 
-.mat-card {
-  alignment: center;
-  padding-top: 5%;
-  alignment: center;
-  padding-left: 32%;
-  padding-right: 20%;
-  width: 50%;
-}
 
 .centerlogo {
   alignment: center;
@@ -21,4 +13,11 @@
 
 .bg {
   background-image: url("../../assets/images/durham_fair_grunge.png");
+}
+
+
+.volforfair {
+  allignment: center;
+  align: center
+
 }

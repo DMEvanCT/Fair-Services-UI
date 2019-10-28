@@ -11,10 +11,10 @@ import {VolGatesComponent} from './vol-gates/vol-gates.component';
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent},
-  {path: "signup", component: SignupComponent},
-  {path: "addgate", component: VolGatesComponent},
-  {path: "login", component: LoginComponent},
-  {path: "easter", component: EastereggsComponent},
+  {path: 'signup', component: SignupComponent},
+  {path: 'addgate', component: VolGatesComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'easter', component: EastereggsComponent},
 ];
 
 @NgModule({

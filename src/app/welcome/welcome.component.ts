@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import { ModelOps} from './volopsmodel';
 
 
 @Component({
@@ -19,6 +20,7 @@ export class WelcomeComponent implements OnInit {
   fairname: string;
   volunteerops: any;
   username: [];
+  model = new ModelOps();
 
 
   constructor(private http: HttpClient) {
@@ -57,6 +59,9 @@ export class WelcomeComponent implements OnInit {
 
   }
 
+  getOps() {
+    return this.model.opertunity;
+  }
 
 
 }
